@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Barbearia Móvel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agende seu Corte</h1>
+    </header>
+
+    <section class="agendamento">
+        <h2>Agendar Corte</h2>
+        <form>
+            <label for="local">Local:</label>
+            <input type="text" id="local" name="local" required>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
+            <label for="barbeiro">Escolha seu barbeiro:</label>
+            <select id="barbeiro" name="barbeiro">
+                <option value="barbeiro1">Dalberth</option>
+                <option value="barbeiro2">Paulo D. </option>
+                <option value="barbeiro3">Renan</option>
+            </select>
+            <button type="submit">Agendar Corte</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Barbearia Móvel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Crie seu Perfil</h1>
+    </header>
+
+    <section class="perfil">
+        <h2>Cadastro:</h2>
+        <form action="agenda.html">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <label for="tipo">Você é:</label>
+            <select id="tipo" name="tipo">
+                <option value="cliente">Cliente</option>
+                <option value="barbeiro">Barbeiro</option>
+            </select>
+            <button type="submit">Criar Perfil</button>
+        </form>
+    </section>
+</body>
+</html>
