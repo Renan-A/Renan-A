@@ -272,7 +272,7 @@ section {
 
 /* Estilo do formulário */
 form {
-    background-color: white; /* Fundo branco para o formulário */
+    background-color: #29529B; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
