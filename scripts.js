@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const opcoes = document.querySelector('.opcoes'); // Seleciona a div com os botões de cadastro
     const voltarHomeBtn = document.querySelector('.menu .btn'); // Seleciona o botão "Voltar para Home"
     const loginBtnContainer = document.getElementById("login-btn-container"); // Seleciona o contêiner do botão de login
+    const loginBtn = document.getElementById("login-btn"); // Seleciona o botão de login
     const fraseCadastro = document.querySelector("main p"); // Seleciona a frase "Escolha uma das opções para continuar:"
 
     // Estilo para a mensagem de sucesso
@@ -57,6 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Ocultar o formulário novamente, se desejar
         formulario.style.display = "none";
+    });
+
+    // Ao clicar no botão de Login
+    loginBtn.addEventListener("click", function() {
+        window.location.href = "login.html"; // Redireciona para a página de login
     });
 });
 
