@@ -8,7 +8,7 @@
 /* Corpo e estilo global */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #F2F2F2;
+    background-color: #000000;
     color: #333;
     line-height: 1.6;
     padding: 0 10px;
@@ -19,14 +19,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #003366;
+    background-color: #29529B;
     padding: 15px 20px;
-    color: #FFFFFF;
+    color: #fff;
 }
 
-h1{
+h1 {
     text-align: center;
-    color: #000000;
+    color: #ddd;
 }
 
 .header .logo h1 {
@@ -36,7 +36,7 @@ h1{
 .menu .btn {
     text-decoration: none;
     color: #fff;
-    background-color: #FF3333;
+    background-color: #ff0000;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -63,16 +63,27 @@ h1{
     object-fit: cover; /* Garante que a imagem se ajuste dentro do círculo */
 }
 
+h2 {
+    color: #ddd;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
 
 .intro h2 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #29529B;
+    color: #ddd;
 }
 
 .intro p {
     font-size: 18px;
-    color: #29529B;
+    color: #ddd;
 }
 
 /* Botões gerais */
@@ -84,7 +95,7 @@ button, .btn {
 /* Estilos para o formulário */
 .cadastro {
     display: flex;
-    color: #FFFFFF;
+    color: #000;
     flex-direction: column;
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
@@ -93,10 +104,9 @@ button, .btn {
     padding: 20px;
 }
 
-.cadastro h2, p{
-    color: #000000;
+.cadastro h2, p {
+    color: #ddd;
 }
-
 
 /* Formulário de cadastro */
 .formulario {
@@ -141,8 +151,8 @@ input {
 .btn-submit {
     width: 100%;
     padding: 10px;
-    background-color: #FF3333;
-    color: #000000;
+    background-color: #ff0000;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -166,7 +176,7 @@ input {
 .login h2 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #000000;
+    color: #ddd;
 }
 
 .login p {
@@ -231,7 +241,7 @@ section {
     background-color: #000000;
 }
 
-.como-funciona h2{
+.como-funciona h2 {
     color: #ddd;
 }
 
@@ -272,14 +282,14 @@ section {
 
 /* Estilo do formulário */
 form {
-    background-color: #29529B; 
+    background-color: white; /* Fundo branco para o formulário */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form label {
-    color: #000000;
+    color: #000;
     display: block;
     margin-bottom: 10px;
 }
@@ -294,7 +304,7 @@ form select {
 }
 
 form button {
-    background-color: #FF3333; /* Cor verde para o botão */
+    background-color: #28a745; /* Cor verde para o botão */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -304,7 +314,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #b30000;
+    background-color: #218838;
 }
 
 .revisao {
@@ -317,21 +327,13 @@ form button:hover {
     margin: auto;
 }
 
-.mensagem-sucesso {
-    background-color: #28a745;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
 .botoes {
     margin-top: 20px;
 }
 
 button {
-    background-color: #FF3333;
-    color: rgb(0, 0, 0);
+    background-color: #28a745;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -341,22 +343,174 @@ button {
 }
 
 button:hover {
-    background-color: #b30000;
+    background-color: #218838;
 }
 
-.perfil h2, h3, p{
+.perfil h2, h3, p {
     text-align: center;
     color: #ddd;
 }
 
-.perfil a{
+.perfil a {
     left: 20px;
 }
 
-.block h3, p {
-    color: #000000;
+.block, p {
+    color: #ddd;
 }
 
-.editar-perfil h2{
+.editar-perfil h2 {
     color: #ddd;
+}
+
+h4 {
+    color: #000;
+}
+
+h5 {
+    color: #ddd;
+}
+
+.avaliacao {
+    padding: 20px;
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.campo textarea {
+    resize: none;
+}
+
+.mensagem-sucesso {
+    display: none; /* Oculto por padrão */
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Cortes agendados */
+.cortes-agendados {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.agenda-lista {
+    margin-top: 20px;
+}
+
+.corte-item {
+    background-color: #e1e1e1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.corte-item p {
+    margin: 5px 0;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabela-cortes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-cortes td, .tabela-cortes th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+
+.tabela-cortes th {
+    background-color: #ddd;
+}
+
+.tabela-cortes tr:hover {
+    background-color: #ddd;
+}
+
+.btn-editar {
+    background-color: #ff0000;
+    color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #ff0000;
+}
+
+.cortes-agendados, a {
+    color: #000;
+}
+
+/* Estilo para as observações */
+.tabela-cortes td:nth-child(6) {
+    font-style: italic;
+    color: #555;
+}
+
+.avalie{
+    color: #ddd;
+}
+
+/* Estilo para os botões */
+.btn-opcao {
+    background-color: #ff0000;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: bold; /* Deixa as letras em negrito */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo do botão ao passar o mouse */
+.btn-opcao:hover {
+    background-color: #1d3a6d;
 }
