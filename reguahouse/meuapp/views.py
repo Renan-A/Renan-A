@@ -46,9 +46,9 @@ def agendar_corte(request):
             barbeiro=barbeiro
         )
 
-        return render(request, 'agendar.html', {'mensagem_sucesso': 'Agendamento realizado com sucesso!'})
+        return render(request, 'agenda.html', {'mensagem_sucesso': 'Agendamento realizado com sucesso!'})
 
-    return render(request, 'agendar.html')
+    return render(request, 'agenda.html')
 
 
 def cadastro(request):
@@ -87,16 +87,14 @@ def cadastro(request):
 
 
 def home_view(request):
-    return render(request, 'meuapp/home.html')
+    return render(request, 'home.html')
 
 def avaliacao_view(request):
-    return render(request, 'meuapp/avaliacao.html')
+    return render(request, 'avaliacao.html')
 
 def perfil_view(request):
-    return render(request, 'meuapp/perfil.html')
+    return render(request, 'perfil.html')
 
-def agendar_corte(request):
-    return render(request, 'agendamento/agendar_corte.html')
 
 
 

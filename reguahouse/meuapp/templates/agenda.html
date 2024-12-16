@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cortes Agendados - Barbearia Móvel</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+   
 </head>
 
 <body>
@@ -13,8 +13,8 @@
         <nav class="menu">
             <h1 class="logo">Agendar corte</h1>
             <div class="nav-links">
-                <a href="{% url 'nome_da_pagina_inicial' %}" class="btn">Sair</a>
-                <a href="{% url 'nome_da_pagina_anterior' %}" class="btn">Voltar</a>
+                <a href="{% url 'login' %}" class="btn">Sair</a>
+                <a href="{% url 'logout' %}" class="btn">Voltar</a>
             </div>
         </nav>
     </header>
@@ -51,7 +51,7 @@
         </form>
     </section>
 
-    <script src="{% static 'scripts.js' %}"></script>
+    
 </body>
 
 </html>
