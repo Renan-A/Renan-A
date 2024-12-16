@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes Agendados - Barbearia Móvel</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="menu">
+            <h1 class="logo">Agendar corte</h1>
+            <div class="nav-links">
+                <a href="{% url 'nome_da_pagina_inicial' %}" class="btn">Sair</a>
+                <a href="{% url 'nome_da_pagina_anterior' %}" class="btn">Voltar</a>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Agende seu Corte</h1>
+    <section class="agendamento">
+        <!-- Mensagem de sucesso -->
+        {% if mensagem_sucesso %}
+        <div id="mensagem-sucesso" class="mensagem-sucesso">
+            <p>{{ mensagem_sucesso }}</p>
+        </div>
+        {% endif %}
+
+        <form id="form-agendamento" method="post">
+            {% csrf_token %}
+            <label for="endereço">Endereço:</label>
+            <input type="text" id="endereço" name="endereço" placeholder="Cidade ;Rua; Número; Bairro; Complemento"
+                required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
+
+            <label for="barbeiro">Escolha seu barbeiro:</label>
+            <select id="barbeiro" name="barbeiro">
+                <option value="barbeiro1">Dalberth</option>
+                <option value="barbeiro2">Paulo D.</option>
+                <option value="barbeiro3">Renan</option>
+            </select>
+
+            <button type="submit">Agendar Corte</button>
+        </form>
+    </section>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+
+</html>
