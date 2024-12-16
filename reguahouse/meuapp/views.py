@@ -95,8 +95,7 @@ def avaliacao_view(request):
 def perfil_view(request):
     return render(request, 'perfil.html')
 
-
-
-
+def index(request):
+    return render(request, 'index.html')
 
 

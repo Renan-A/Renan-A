@@ -8,6 +8,7 @@ urlpatterns = [
     path('cadastro/', views.cadastro, name='cadastro'),
     path('agenda/', views.agendar_corte, name='agendar_corte'),
     path('logout/', views.logout, name='logout'),
+    path('', views.index, name='index'), # Rota principal para a página index
 
     
 

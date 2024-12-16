@@ -1,0 +1,524 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29529B;
+    padding: 15px 20px;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #ddd;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+}
+
+.menu .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.menu .btn:hover {
+    background-color: #b30000;
+}
+
+/* Introdução */
+.intro {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.intro .main-logo {
+    height: 200px; /* Ajuste o tamanho conforme necessário */
+    width: 200px; /* Mantém proporções iguais para formar o círculo */
+    margin-bottom: 20px;
+    border-radius: 50%; /* Transforma em círculo */
+    border: 5px solid #ddd; /* Adiciona a borda branca */
+    object-fit: cover; /* Garante que a imagem se ajuste dentro do círculo */
+}
+
+h2 {
+    color: #ddd;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Botões gerais */
+button, .btn {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilos para o formulário */
+.cadastro {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Altura total da tela */
+    text-align: center;
+    padding: 20px;
+}
+
+.cadastro h2, p {
+    color: #ddd;
+}
+
+/* Formulário de cadastro */
+.formulario {
+    background-color: #29529B;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima do formulário */
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Ajustes adicionais */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #b30000;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.login h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.login p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.login p a {
+    text-decoration: none;
+    color: #29529B;
+}
+
+.login p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos gerais para as seções */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    padding: 40px 20px;
+}
+
+/* Estilo da seção de serviços */
+.servicos {
+    background-color: #000000;
+}
+
+.servicos h2 {
+    color: #ddd;
+}
+
+.servicos .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.servicos p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.servicos .btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ddd;
+    background-color: #29529B;
+    border: none;
+    border-radius: 5px;
+}
+
+.servicos .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da seção Como Funciona */
+.como-funciona {
+    background-color: #000000;
+}
+
+.como-funciona h2 {
+    color: #ddd;
+}
+
+.como-funciona .info-blocks {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.como-funciona .block {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Define a largura dos blocos */
+}
+
+.como-funciona .block h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.como-funciona .block p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #29529B;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Estilo do formulário */
+form {
+    background-color: white; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #28a745; /* Cor verde para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.revisao {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.perfil h2, h3, p {
+    text-align: center;
+    color: #ddd;
+}
+
+.perfil a {
+    left: 20px;
+}
+
+.block, p {
+    color: #ddd;
+}
+
+.editar-perfil h2 {
+    color: #ddd;
+}
+
+h4 {
+    color: white;
+}
+
+h5 {
+    color: #ddd;
+}
+
+.avaliacao {
+    padding: 20px;
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.campo textarea {
+    resize: none;
+}
+
+.mensagem-sucesso {
+    display: none; /* Oculto por padrão */
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Cortes agendados */
+.cortes-agendados {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.agenda-lista {
+    margin-top: 20px;
+}
+
+.corte-item {
+    background-color: #e1e1e1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.corte-item p {
+    margin: 5px 0;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabela-cortes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-cortes td, .tabela-cortes th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+
+.tabela-cortes th {
+    background-color: black;
+}
+
+.tabela-cortes tr:hover {
+    background-color: #ddd;
+}
+
+.btn-editar {
+    background-color: #ff0000;
+    color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #ff0000;
+}
+
+.cortes-agendados, a {
+    color: white;
+}
+
+/* Estilo para as observações */
+.tabela-cortes td:nth-child(6) {
+    font-style: italic;
+    color: #555;
+}
+
+.avalie{
+    background-color: #ff0000;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: bold; /* Deixa as letras em negrito */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para os botões */
+.btn-opcao {
+    background-color: #ff0000;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: bold; /* Deixa as letras em negrito */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo do botão ao passar o mouse */
+.btn-opcao:hover {
+    background-color: #1d3a6d;
+}
