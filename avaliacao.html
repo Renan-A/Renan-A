@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação - Barbearia Móvel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <h1 class="logo">Avaliação</h1>
+            <div class="nav-links">
+                <a href="test.html" class="btn">Voltar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="avaliacao">
+            <h2 class="section-title">Deixe sua Avaliação</h2>
+            <p>A sua opinião é muito importante para nós!</p>
+
+            <form id="form-avaliacao">
+                <div class="campo">
+                    <label for="nota-corte">Avaliação do corte:</label>
+                    <select id="nota-corte" name="nota-corte" required>
+                        <option value="">Selecione</option>
+                        <option value="1">1 - Muito Ruim</option>
+                        <option value="2">2 - Ruim</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bom</option>
+                        <option value="5">5 - Excelente</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="nota-atendimento">Avaliação do atendimento:</label>
+                    <select id="nota-atendimento" name="nota-atendimento" required>
+                        <option value="">Selecione</option>
+                        <option value="1">1 - Muito Ruim</option>
+                        <option value="2">2 - Ruim</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bom</option>
+                        <option value="5">5 - Excelente</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="nota-site">Avaliação do site:</label>
+                    <select id="nota-site" name="nota-site" required>
+                        <option value="">Selecione</option>
+                        <option value="1">1 - Muito Ruim</option>
+                        <option value="2">2 - Ruim</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bom</option>
+                        <option value="5">5 - Excelente</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="comentarios">Deixe seu comentário:</label>
+                    <textarea id="comentarios" name="comentarios" placeholder="Escreva aqui..." rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Avaliação</button>
+
+                <!-- Mensagem de sucesso -->
+                <div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+                    <p>Obrigado pela sua avaliação! Ela foi registrada com sucesso.</p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Entre em contato: (99) 9999-9999</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
