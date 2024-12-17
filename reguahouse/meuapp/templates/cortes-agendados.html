@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes Agendados - Barbearia Móvel</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="menu">
+            <h1 class="logo">Cortes Agendados</h1>
+            <div class="nav-links">
+                <a href="{% url 'index' %}" class="btn">Sair</a>
+                <a href="{% url 'test' %}" class="btn">Voltar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cortes-agendados">
+            <h4 class="section-title">Cortes Agendados para Esta Semana</h4>
+            <a>Aqui estão os cortes agendados para você durante a semana. Fique atento aos horários!</a>
+
+            <div id="agenda-lista" class="agenda-lista">
+                <table class="tabela-cortes">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Serviço</th>
+                            <th>Endereço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- As linhas da tabela serão preenchidas dinamicamente com JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

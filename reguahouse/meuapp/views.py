@@ -8,20 +8,27 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from .forms import BarbeiroForm  # Formulário específico para barbeiro (caso seja necessário)
 
-def login(request):
+def login_view(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         senha = request.POST.get('senha')
 
-        # Autenticar o usuário (substituir com username se necessário)
-        user = authenticate(request, username=email, password=senha)
-        if user is not None:
-            login(request, user)
-            return redirect('home')  # Redirecione para a página principal ou dashboard
+        # Tenta autenticar o usuário usando o e-mail
+        try:
+            user = User.objects.get(email=email)  # Busca o usuário pelo e-mail
+        except User.DoesNotExist:
+            user = None
+
+        if user is not None and user.check_password(senha):  # Verifica a senha
+            login(request, user)  # Realiza o login
+            return redirect('test')  # Redireciona para a página 'test'
         else:
-            messages.error(request, 'Credenciais inválidas. Tente novamente.')
+            messages.error(request, 'E-mail ou senha incorretos.')
 
     return render(request, 'login.html')
+
+def test_view(request):
+    return render(request, 'test.html')  # Renderiza a página de entrada
 
 def logout(request):
     logout(request)
@@ -79,23 +86,37 @@ def cadastro(request):
                 senha=senha
             )
 
-        return redirect('home')  # Substitua pelo nome da URL de destino
+        return redirect('index')  # Substitua pelo nome da URL de destino
 
     return render(request, 'cadastro.html')
 
 
 
 
-def home_view(request):
-    return render(request, 'home.html')
+def index(request):
+    return render(request, 'index.html')
 
-def avaliacao_view(request):
-    return render(request, 'avaliacao.html')
+def login_view(request):
+    return render(request, 'login.html')
+
+def cadastro_view(request):
+    return render(request, 'cadastro.html')
+
+def test_view(request):
+    return render(request, 'test.html')
 
 def perfil_view(request):
     return render(request, 'perfil.html')
 
-def index(request):
-    return render(request, 'index.html')
+def agenda_view(request):
+    return render(request, 'agenda.html')
 
+def avaliacao_view(request):
+    return render(request, 'avaliacao.html')
+
+def cortes_agendados_view(request):
+    return render(request, 'cortes-agendados.html')
+
+def editar_perfil_view(request):
+    return render(request, 'editar-perfil.html')
 

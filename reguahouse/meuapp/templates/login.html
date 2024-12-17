@@ -13,7 +13,7 @@
             <h1>Régua House</h1>
         </div>
         <nav class="menu">
-            <a href="{% url 'home' %}" class="btn">Voltar para Home</a>
+            <a href="{% url 'index' %}" class="btn">Voltar para Home</a>
         </nav>
     </header>
 
@@ -42,7 +42,7 @@
         {% endif %}
 
         <p>Não tem uma conta? <a href="{% url 'cadastro' %}">Cadastre-se aqui</a></p>
-        <a href="{% url 'logout' %}">Sair</a>
+        <a href="{% url 'index' %}">Sair</a>
     </main>
 
     <script src="{% static 'scripts.js' %}"></script>
