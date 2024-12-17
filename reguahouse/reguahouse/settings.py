@@ -134,3 +134,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_URL = '/login/'
+
+AUTH_USER_MODEL = 'seuapp.CustomUser'  # Substitua 'seuapp' pelo nome do seu app
+
+

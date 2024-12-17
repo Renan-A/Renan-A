@@ -9,6 +9,6 @@ urlpatterns = [
     path('perfil/', views.perfil_view, name='perfil'),  # Página de perfil
     path('agenda/', views.agenda_view, name='agenda'),  # Página de agenda
     path('avaliacao/', views.avaliacao_view, name='avaliacao'),  # Página de avaliação
-    path('cortes_agendados/', views.cortes_agendados_view, name='cortes_agendados'),  # Página de cortes agendados
-    path('editar_perfil/', views.editar_perfil_view, name='editar_perfil'),  # Página de editar perfil
+    path('cortes-agendados/', views.cortes_agendados_view, name='cortes-agendados'),  # Página de cortes agendados
+    path('editar-perfil/', views.editar_perfil_view, name='editar-perfil'),  # Página de editar perfil
 ]

@@ -7,13 +7,15 @@ from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from .forms import BarbeiroForm  # Formulário específico para barbeiro (caso seja necessário)
+from django.contrib.auth import get_user_model
+
+User = get_user_model()  # Retorna o modelo de usuário configurado no projeto
 
 def login_view(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         senha = request.POST.get('senha')
 
-        # Tenta autenticar o usuário usando o e-mail
         try:
             user = User.objects.get(email=email)  # Busca o usuário pelo e-mail
         except User.DoesNotExist:
@@ -86,9 +88,9 @@ def cadastro(request):
                 senha=senha
             )
 
-        return redirect('index')  # Substitua pelo nome da URL de destino
+        return redirect('perfil')  # Substitua pelo nome da URL de destino
 
-    return render(request, 'cadastro.html')
+    return render(request, 'cadastro')
 
 
 

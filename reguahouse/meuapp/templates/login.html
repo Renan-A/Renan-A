@@ -14,6 +14,8 @@
         </div>
         <nav class="menu">
             <a href="{% url 'index' %}" class="btn">Voltar para Home</a>
+            
+            
         </nav>
     </header>
 
@@ -30,7 +32,8 @@
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>
         
-            <button type="submit" class="btn-submit">Entrar</button>
+            <a href="{% url 'test' %}" class="btn-submit">Entrar</a>
+
         </form>
 
         {% if messages %}
