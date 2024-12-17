@@ -17,11 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('meuapp/', include('meuapp.urls')),
-    path('admin/', admin.site.urls),
-    path('', include('meuapp.urls')),
-    path('', include('users.urls')),  # Inclui as rotas da aplicação
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),  # Mantém apenas uma vez
+    path('meuapp/', include('meuapp.urls')),  # Rota para o app meuapp
+    path('', include('meuapp.urls')),  # Rota para o app meuapp
+    path('', include('users.urls')),  # Inclui as rotas da aplicação users
     path('usuarios/', include('users.urls')),  # Inclui as URLs de cadastro de usuário
 ]
