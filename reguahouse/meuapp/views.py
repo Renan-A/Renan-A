@@ -13,19 +13,18 @@ User = get_user_model()  # Retorna o modelo de usuário configurado no projeto
 
 def login_view(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
-        senha = request.POST.get('senha')
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
 
-        try:
-            user = User.objects.get(email=email)  # Busca o usuário pelo e-mail
-        except User.DoesNotExist:
-            user = None
-
-        if user is not None and user.check_password(senha):  # Verifica a senha
-            login(request, user)  # Realiza o login
-            return redirect('test')  # Redireciona para a página 'test'
+        if user is not None:
+            # A senha está correta, o usuário é autenticado
+            login(request, user)
+            return redirect('home')  # Redireciona para a página inicial
         else:
-            messages.error(request, 'E-mail ou senha incorretos.')
+            # A senha está incorreta, ou o usuário não existe
+            error_message = "Usuário ou senha incorretos"
+            return render(request, 'login.html', {'error_message': error_message})
 
     return render(request, 'login.html')
 

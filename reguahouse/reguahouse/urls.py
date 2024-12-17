@@ -20,6 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('meuapp/', include('meuapp.urls')),
     path('admin/', admin.site.urls),
-    path('', include('meuapp.urls')),  # Inclui as rotas da aplicação
-   
+    path('', include('meuapp.urls')),
+    path('', include('users.urls')),  # Inclui as rotas da aplicação
+    path('admin/', admin.site.urls),
+    path('usuarios/', include('users.urls')),  # Inclui as URLs de cadastro de usuário
 ]

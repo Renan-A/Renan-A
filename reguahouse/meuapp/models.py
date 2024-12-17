@@ -1,6 +1,6 @@
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
-# Gerenciador de Usuários Customizado
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -17,10 +17,8 @@ class CustomUserManager(BaseUserManager):
 
         return self.create_user(email, password, **extra_fields)
 
-
-# Modelo Customizado de Usuário
 class CustomUser(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True)  # E-mail como identificador principal
+    email = models.EmailField(unique=True)
     nome = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -31,19 +29,13 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['nome']
 
+    # Modificar os relacionamentos para incluir `related_name`
+    groups = models.ManyToManyField('auth.Group', related_name='customuser_set', blank=True)
+    user_permissions = models.ManyToManyField('auth.Permission', related_name='customuser_permissions_set', blank=True)
+
     def __str__(self):
         return self.email
 
-
-
-class Agendamento(models.Model):
-    endereco = models.TextField()
-    data = models.DateField()
-    horario = models.TimeField()
-    barbeiro = models.CharField(max_length=100)
-
-    def __str__(self):
-        return f"{self.barbeiro} - {self.data} às {self.horario}"
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=200)
@@ -52,7 +44,6 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
-
 
 class Barbeiro(models.Model):
     nome = models.CharField(max_length=200)
@@ -64,3 +55,12 @@ class Barbeiro(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Agendamento(models.Model):
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    barbeiro = models.ForeignKey(Barbeiro, on_delete=models.CASCADE)
+    data = models.DateTimeField()
+    observacao = models.TextField()
+
+    def __str__(self):
+        return f'Agendamento de {self.cliente} com {self.barbeiro} em {self.data}'

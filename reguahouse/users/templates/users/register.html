@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Barbearia Móvel</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Régua House</h1>
+        </div>
+        <nav class="menu">
+            <a href="{% url 'login' %}" class="btn">Voltar</a>
+        </nav>
+    </header>
+
+    <main class="cadastro">
+        <h2>Cadastro</h2>
+        <p>Escolha uma das opções para continuar:</p>
+
+        <div class="opcoes">
+            <button id="cliente-btn" class="btn-opcao">Sou Cliente</button>
+            <button id="barbeiro-btn" class="btn-opcao">Sou Barbeiro</button>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <form id="cadastro-form" class="formulario" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Exibe o formulário -->
+            <button type="submit" class="btn-submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+
+</html>
